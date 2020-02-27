@@ -5,5 +5,6 @@ module.exports = {
   },
   globals: {
     ClipboardJS: true,
+    io: true
   },
 };

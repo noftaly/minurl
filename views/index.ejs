@@ -12,6 +12,7 @@
   <!-- Bootstrap JS --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <!-- FontAwesome --><script src="https://kit.fontawesome.com/a10d276de7.js" crossorigin="anonymous"></script>
   <!-- Clipboardjs --><script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <!-- Socket.io --><script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js" integrity="sha256-Dul4c09cdrWKXVtallPxF558lwxMwCC8dXJdZ0PVW54=" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
@@ -51,7 +52,7 @@
                   <a href="<%= shortUrl.short %>" target="_blank"><%= shortUrl.short %></a>
                   <i class="fas fa-link hoverable-icon clipboard-event" data-clipboard-text="http://localhost:3000/<%= shortUrl.short %>"></i>
                 </td>
-                <td><%= shortUrl.clicks %></td>
+                <td id="clicks"><%= shortUrl.clicks %></td>
                 <td><%= shortUrl.formattedCreatedAt %></td>
                 <td><i class="fas fa-trash hoverable-icon" onclick="removeUrl('<%= shortUrl.short %>')"></i></td>
               </tr>

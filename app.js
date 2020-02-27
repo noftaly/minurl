@@ -9,11 +9,15 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
 import nanoid from 'nanoid';
+import socketio from 'socket.io';
+
 import ShortUrl from './models/shortUrl';
 import formatDate from './utils/formatDate';
 
 dotenvConfig();
 const app = express();
+const server = app.listen(3000, () => console.log('App is running at port 3000'));
+const io = socketio(server);
 
 // Setting up mongoose
 mongoose.set('useFindAndModify', false);
@@ -68,8 +72,7 @@ app.get('/:shortUrl', async (req, res) => {
 
   url.clicks++;
   url.save();
+  io.emit('newClick', { shortUrl: url.short, clicks: url.clicks });
 
   res.status(301).redirect(url.full);
 });
-
-app.listen(3000, () => console.log('App is running at port 3000'));
