@@ -1,0 +1,45 @@
+{
+  "name": "minurl",
+  "version": "1.0.0",
+  "description": "A URL minimifier",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node app.js",
+    "dev": "nodemon --exec babel-node app.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "url",
+    "shrinker",
+    "url",
+    "minimifier",
+    "minurl"
+  ],
+  "author": "Elliot 'noftaly' Maisl <elliot.maisl@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.9.1",
+    "nanoid": "^2.1.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "eslint": "^6.8.0",
+    "eslint-config-noftalint": "^1.1.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-optimize-regex": "^1.1.7",
+    "eslint-plugin-unicorn": "^16.1.1",
+    "nodemon": "^2.0.2"
+  }
+}

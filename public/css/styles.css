@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans|Montserrat+Alternates:700&display=swap');
+
+html, body {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat Alternates';
+  font-weight: 700;
+  font-size: 6rem;
+}
+
+.first-half h1 {
+  line-height: 50vh; /* Center vertically */
+}
+
+.first-half {
+  background-color: #0E193A;
+  color: #FFFFFF;
+  height: 50vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.longUrlForm {
+  transform: translateY(-50%);
+}
+
+.longUrlForm .input {
+  border-radius: 15px;
+  height: 50px;
+  width: 100%;
+  outline: none ;
+  border: 0;
+  -webkit-box-shadow: 0px 11px 28px -11px rgba(0,0,0,0.61);
+  -moz-box-shadow: 0px 11px 28px -11px rgba(0,0,0,0.61);
+  box-shadow: 0px 11px 28px -11px rgba(0,0,0,0.61);
+}
+
+.longUrlForm .btn {
+  border-radius: 15px;
+}
+
+input.form-control:focus {
+  -webkit-box-shadow: 0px 11px 28px -11px rgba(0,0,0,0.61);
+  -moz-box-shadow: 0px 11px 28px -11px rgba(0,0,0,0.61);
+  box-shadow: 0px 11px 28px -11px rgba(0,0,0,0.61);
+}
+
+.hoverable-icon {
+  opacity: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hoverable-icon:hover {
+  opacity: 100%;
+  transition: all 0.3s;
+}
+
+.second-half {
+  background-color: #FFFFFF;
+}
+
+a:hover {
+  text-decoration: none;
+}
