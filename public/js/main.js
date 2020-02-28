@@ -8,5 +8,5 @@ function removeUrl(shortUrl) {
 }
 
 socket.on('newClick', (data) => {
-  document.querySelector(`tr#shorturl-${data.shortUrl} td#clicks`).textContent = data.clicks;
+  document.querySelector(`tr#shorturl-${data.shortUrl} td.clicks`).textContent = data.clicks;
 });

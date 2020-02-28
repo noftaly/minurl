@@ -49,7 +49,7 @@
                   <a href="<%= shortUrl.short %>" target="_blank"><%= shortUrl.short %></a>
                   <i class="fas fa-link hoverable-icon clipboard-event" data-clipboard-text="http://localhost:3000/<%= shortUrl.short %>"></i>
                 </td>
-                <td id="clicks"><%= shortUrl.clicks %></td>
+                <td class="clicks"><%= shortUrl.clicks %></td>
                 <td><%= shortUrl.formattedCreatedAt %></td>
                 <td><i class="fas fa-trash hoverable-icon" onclick="removeUrl('<%= shortUrl.short %>')"></i></td>
               </tr>
