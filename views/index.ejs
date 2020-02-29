@@ -26,14 +26,15 @@
       <div class="container">
         <form class="longUrlForm" action="/shortUrl" method="post">
           <div class="input-group">
-            <input type="url" class="form-control input" placeholder="URL" name="longUrl" autofocus>
+            <input id="longUrlInput" type="url" class="form-control input" placeholder="URL" name="longUrl" autofocus>
+            <label class="sr-only" for="longUrlInput">URL à raccourcir</label>
             <div class="input-group-append">
               <button class="btn btn-secondary" type="button" id="button-confirm">Raccourcir</button>
             </div>
           </div>
         </form>
 
-        <table class="table table-hover mt-5">
+        <table class="table table-hover table-responsive mt-5">
           <thead>
             <th scope="col">Lien entier</th>
             <th scope="col">Lien rétréci</th>
@@ -51,7 +52,9 @@
                 </td>
                 <td class="clicks"><%= shortUrl.clicks %></td>
                 <td><%= shortUrl.formattedCreatedAt %></td>
-                <td><i class="fas fa-trash hoverable-icon" onclick="removeUrl('<%= shortUrl.short %>')"></i></td>
+                <td>
+                  <i class="fas fa-trash hoverable-icon" onclick="removeUrl('<%= shortUrl.short %>')"></i>
+                </td>
               </tr>
             <% } %>
           </tbody>
