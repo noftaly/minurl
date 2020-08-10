@@ -34,31 +34,33 @@
           </div>
         </form>
 
-        <table class="table table-hover table-responsive mt-5">
-          <thead>
-            <th scope="col">Lien entier</th>
-            <th scope="col">Lien rétréci</th>
-            <th scope="col">Cliques</th>
-            <th scope="col">Création</th>
-            <th scope="col">Supprimer</th>
-          </thead>
-          <tbody>
-            <% for (const shortUrl of shortUrls) { %>
-              <tr id="shorturl-<%= shortUrl.short %>">
-                <td><%= shortUrl.full %></td>
-                <td>
-                  <a href="<%= shortUrl.short %>" target="_blank"><%= shortUrl.short %></a>
-                  <i class="fas fa-link hoverable-icon clipboard-event" data-clipboard-text="http://localhost:3000/<%= shortUrl.short %>"></i>
-                </td>
-                <td class="clicks"><%= shortUrl.clicks %></td>
-                <td><%= shortUrl.formattedCreatedAt %></td>
-                <td>
-                  <i class="fas fa-trash hoverable-icon" onclick="removeUrl('<%= shortUrl.short %>')"></i>
-                </td>
-              </tr>
-            <% } %>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-hover mt-5">
+            <thead>
+              <th scope="col">Lien entier</th>
+              <th scope="col">Lien rétréci</th>
+              <th scope="col">Clics</th>
+              <th scope="col">Création</th>
+              <th scope="col">Supprimer</th>
+            </thead>
+            <tbody>
+              <% for (const shortUrl of shortUrls) { %>
+                <tr id="shorturl-<%= shortUrl.short %>">
+                  <td><%= shortUrl.full %></td>
+                  <td>
+                    <a href="<%= shortUrl.short %>" target="_blank"><%= shortUrl.short %></a>
+                    <i class="fas fa-link hoverable-icon clipboard-event" data-clipboard-text="http://localhost:3000/<%= shortUrl.short %>"></i>
+                  </td>
+                  <td class="clicks"><%= shortUrl.clicks %></td>
+                  <td><%= shortUrl.formattedCreatedAt %></td>
+                  <td>
+                    <i class="fas fa-trash hoverable-icon" onclick="removeUrl('<%= shortUrl.short %>')"></i>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 </body>
