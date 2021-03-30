@@ -8,7 +8,7 @@ import express from 'express';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
-import nanoid from 'nanoid';
+import { nanoid } from 'nanoid';
 import socketio from 'socket.io';
 
 import ShortUrl from './models/shortUrl';

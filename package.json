@@ -21,26 +21,30 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
-    "cookie-parser": "^1.4.4",
+    "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
-    "ejs": "^3.0.1",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "helmet": "^3.21.3",
-    "mongoose": "^5.9.2",
-    "morgan": "^1.9.1",
-    "nanoid": "^2.1.11",
-    "socket.io": "^2.3.0"
+    "helmet": "^4.4.1",
+    "mongoose": "^5.12.2",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.1.22",
+    "socket.io": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/node": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "eslint": "^6.8.0",
-    "eslint-config-noftalint": "^1.1.0",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-optimize-regex": "^1.1.7",
-    "eslint-plugin-unicorn": "^16.1.1",
-    "nodemon": "^2.0.2"
+    "@babel/core": "^7.13.14",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.12",
+    "eslint": "^7.23.0",
+    "eslint-config-noftalint": "^1.21.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-unicorn": "^29.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "volta": {
+    "node": "14.16.0",
+    "npm": "6.14.12"
   }
 }
